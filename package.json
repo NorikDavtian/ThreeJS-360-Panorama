@@ -1,0 +1,12 @@
+{
+  "name": "ThreeJS-Panorama",
+  "description": "A panoramic experiment with ThreeJS to visualize a 360 tour with controls",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "time-grunt": "*"
+  }
+}

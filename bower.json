@@ -1,0 +1,14 @@
+{
+  "name": "ThreeJS-Panorama",
+  "version": "0.1",
+  "dependencies": {
+    "threejs": "r68"
+  },
+  "authors": [
+    "Norik Davtian <norik@bigemployee.com>"
+  ],
+  "description": "A panoramic experiment with ThreeJS to visualize a 360 tour with controls",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true
+}
