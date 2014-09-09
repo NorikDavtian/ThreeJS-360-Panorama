@@ -4,14 +4,100 @@
         <title>ThreeJS 360 Panorama</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            html{
+                margin: 0;
+                padding: 0;      
+                text-align: center;
+            }
+            body {
+                font-size: 18px;
+                line-height: 1.5em;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: 40px auto;
+                padding: 0;
+                display: inline-block;
+                max-width: 1440px;
+                overflow-x: hidden;
+            }
+            a{
+                color: #528CE0;
+            }
+            #demo{
+                /* comment for fixed dimentsions */
+                position: relative;
+                width: 1440px;
+                height: 650px;
+                margin: 0 auto;
+                overflow: hidden;
+                cursor: move; /* fallback if grab cursor is unsupported */
+                cursor: grab;
+                cursor: -moz-grab;
+                cursor: -webkit-grab;
+            }
+            #demo:active { 
+                cursor: grabbing;
+                cursor: -moz-grabbing;
+                cursor: -webkit-grabbing;
+            }
+            #log{
+                position: absolute;
+                background: #fff;
+                padding: 20px;
+                bottom: 20px;
+                left: 20px;
+                width: 150px;
+                font: normal 12px/18px Monospace, Arial, Helvetical, sans-serif;
+                text-align: left;
+                border: 3px double #ddd;
+            }
+            #description{
+                display: inline-block;
+                width: 100%;
+                max-width: 600px;
+                text-align: left;
+            }
+        </style>
     </head>
     <body>
-        <div>Let's Start :]</div>
-        
-<!--    Load three.js from CDN
-        <script src="http://threejs.org/build/three.min.js"></script>
-        or, for reliability of this demo just use the local copy -->
-        
+        <h1>A panoramic experiment with Three.JS</h1>
+        <div id="demo">
+            <div id="log"></div>
+        </div>        
+        <div id="description">
+            <p>
+                The concept behind this panoramic tour is very simple. 
+                We are using <a href="https://github.com/mrdoob/three.js">three.js</a> JavaScript 3D library 
+                to wrap <a href="img/spherical_texture.jpg">a spherical panoramic image</a> around a 3D sphere. 
+            </p>
+            <p>
+                Then we define a scene and add a camera to display the the applied image texture to our sphere. 
+            </p>
+            <p>
+                In order for our demo to look like the way it is, we place the camera inside the sphere, 
+                and by applying a very subtle rotation to the camera we make it seem like that the object is rotating.
+            </p>
+            <p>
+                Then we add some mouse events to the element that we have injected out scene into, to correspond to 
+                new camera X, Y, and Z positions.
+            </p>
+            <p>               
+                We also bound the mouse wheel (scroll) event to our camera's field of view to add the zoom effect.
+            </p>
+            <p>
+                twitter: <a href="https://twitter.com/NorikDavtian">@NorikDavtian</a><br>
+                github: <a href="https://github.com/NorikDavtian/ThreeJS-360-Panorama">Download Source</a><br>
+                license: MIT
+            </p>
+        </div>
+
+        <!--    Load three.js from CDN
+                <script src="http://threejs.org/build/three.min.js"></script>
+                or, for reliability of this demo just use the local copy -->
+
         <script src="libs/threejs/build/three.min.js"></script>        
+        <script src="js/main.js"></script>        
     </body>
 </html>
